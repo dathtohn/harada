@@ -1,0 +1,1 @@
+# Tsuyoshi Haruda Website CMS
