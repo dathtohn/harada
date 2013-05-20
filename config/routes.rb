@@ -1,4 +1,4 @@
-Haruda::Application.routes.draw do
+Harada::Application.routes.draw do
   root to: 'pages#home'
 
   match '/portfolio', to: 'pages#portfolio'
