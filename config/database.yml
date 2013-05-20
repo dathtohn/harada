@@ -15,7 +15,7 @@ development:
   database: haruda_development
   pool: 5
   username: root
-  password:
+  password: '23'
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
