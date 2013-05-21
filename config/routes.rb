@@ -1,7 +1,13 @@
 Harada::Application.routes.draw do
+  get "collections/new"
+
+  resources :collections
+  resources :works
+
   root to: 'pages#home'
 
-  match '/portfolio', to: 'pages#portfolio'
+  match '/admin',     to: 'pages#admin'
+  match '/portfolio', to: 'collections#index'
   match '/about',     to: 'pages#about'
   match '/contact',   to: 'pages#contact'
   # The priority is based upon order of creation:
