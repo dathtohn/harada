@@ -1,0 +1,7 @@
+<li>
+  <span class="content">
+  	<%= work.title %>
+    <%= image_tag work.link %>
+    | <%= link_to "delete", work, method: :delete, data: { confirm: "You sure?" } %>
+  </span><br>
+</li>

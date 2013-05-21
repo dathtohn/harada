@@ -16,6 +16,7 @@ class CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
+    @works = @collection.works
   end
 
   def edit

@@ -1,11 +1,12 @@
 <% provide(:title, "New Work") %>
 <h1>New Work</h1>
 
-<%= form_for(@work) do |f| %>
-  <% if @work.errors.any? %>
-    <%= render 'shared/error_messages' %>
-  <% end %>
-  <%= f.label :content %><br>
-  <%= f.text_field :content %>
-  <%= f.submit "Create work" %>
+<%= form_tag(collection_works_path) do %>
+  <%= label_tag :title %><br>
+  <%= text_field_tag :title %><br>
+	
+	<%= label_tag :link %><br>
+  <%= text_field_tag :link %><br>
+
+  <%= submit_tag "Add new work" %>
 <% end %>

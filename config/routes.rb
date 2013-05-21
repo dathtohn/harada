@@ -1,6 +1,10 @@
 Harada::Application.routes.draw do
   resources :sessions
-  resources :collections
+  
+  resources :collections do
+    resources :works
+  end
+
   resources :works
 
   root to: 'pages#home'

@@ -1,3 +1,4 @@
+<%= provide(:title, 'Portfolio') %>
 <h1>Portfolio</h1>
 
 <%= link_to "Create new collection", new_collection_path %>
@@ -6,6 +7,7 @@
   <% @collections.each do |collection| %>
     <li>
       <%= link_to collection.title, collection %>
+      <%= collection.date.to_s %>
       <%= pluralize(collection.works.count, "work") %>
       <%= link_to "delete", collection, method: :delete, data: { confirm: "You sure?" } %>
   	</li>

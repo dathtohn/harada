@@ -1,7 +1,11 @@
 <% provide(:title, @collection.title) %>
+
 <h1><%= @collection.title %></h1>
 <%= @collection.date.to_s %>
+
 <% if @collection.works.any? %>
-  <h3>Posts (<%= @collection.works.count %>)</h3>
-  <%= render @works %>
+  <h3>Works (<%= @collection.works.count %>)</h3>
+  <%= render @works %><br>
 <% end %>
+
+<%= link_to "Add new work", new_collection_work_path(@collection) %>
