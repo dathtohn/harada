@@ -1,0 +1,7 @@
+<% provide(:title, @collection.title) %>
+<h1><%= @collection.title %></h1>
+<%= @collection.date.to_s %>
+<% if @collection.works.any? %>
+  <h3>Posts (<%= @collection.works.count %>)</h3>
+  <%= render @works %>
+<% end %>

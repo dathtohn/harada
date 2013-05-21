@@ -1,0 +1,13 @@
+<h1>Portfolio</h1>
+
+<%= link_to "Create new collection", new_collection_path %>
+
+<ul class="collections">
+  <% @collections.each do |collection| %>
+    <li>
+      <%= link_to collection.title, collection %>
+      <%= pluralize(collection.works.count, "work") %>
+      <%= link_to "delete", collection, method: :delete, data: { confirm: "You sure?" } %>
+  	</li>
+  <% end %>
+</ul>
