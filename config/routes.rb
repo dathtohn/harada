@@ -1,12 +1,11 @@
 Harada::Application.routes.draw do
-  get "collections/new"
-
+  resources :sessions
   resources :collections
   resources :works
 
   root to: 'pages#home'
 
-  match '/admin',     to: 'pages#admin'
+  match '/admin',     to: 'sessions#new'
   match '/portfolio', to: 'collections#index'
   match '/about',     to: 'pages#about'
   match '/contact',   to: 'pages#contact'

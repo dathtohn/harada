@@ -3,3 +3,5 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 Harada::Application.initialize!
+
+Date::DATE_FORMATS[:default] = '%b %Y'
