@@ -13,4 +13,8 @@
 class Work < ActiveRecord::Base
   attr_accessible :collection_id, :link, :title
   belongs_to :collection
+
+  validates :collection_id, presence: true
+  validates :link, presence: true
+  validates :title, presence: true
 end

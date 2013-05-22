@@ -1,7 +1,5 @@
-<li>
-  <span class="content">
-  	<%= work.title %>
-    | <%= link_to "delete", work, method: :delete, data: { confirm: "You sure?" } %><br>
-    <%= image_tag work.link %>
-  </span><br>
-</li>
+<div class="box col3">
+	<%= work.title %>
+  | <%= link_to "delete", work, method: :delete, data: { confirm: "You sure?" } %><br>
+  <%= image_tag work.link %>
+</div>

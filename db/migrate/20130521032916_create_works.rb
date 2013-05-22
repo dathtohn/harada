@@ -1,9 +1,9 @@
 class CreateWorks < ActiveRecord::Migration
   def change
     create_table :works do |t|
-      t.string :title
+      t.string	:title
       t.integer :collection_id
-      t.string :link
+      t.string	:link
 
       t.timestamps
     end
