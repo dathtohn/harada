@@ -15,6 +15,7 @@ class Work < ActiveRecord::Base
   belongs_to :collection
 
   validates :collection_id, presence: true
-  validates :link, presence: true
+  VALID_LINK_REGEX = /.+[.]jpg\z/
+  validates :link, presence: false, format: { with: VALID_LINK_REGEX }
   validates :title, presence: true
 end
