@@ -11,7 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
-//= require_tree .
 //= require masonry/jquery.masonry
 //= require masonry/modernizr-transitions
+//= require fancybox
+//= require jquery_ujs
+//= require_tree .
