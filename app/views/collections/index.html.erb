@@ -6,11 +6,12 @@
 <ul class="collections">
   <% @collections.each do |collection| %>
     <li>
-      <h3><%= link_to collection.title, collection %>
-      <%= collection.date.to_s %></h3><br>
+      <h4><%= link_to collection.title, collection %>
+      <%= collection.date.to_s %>
+      | <%= link_to "edit", edit_collection_path(collection) %>
+      | <%= link_to "delete", collection, method: :delete, data: { confirm: "You sure?" } %></h4>
       <%= link_to image_tag(collection.link, size: '150x150'), collection %>
       <%= pluralize(collection.works.count, "work") %>
-      <%= link_to "delete", collection, method: :delete, data: { confirm: "You sure?" } %>
   	</li>
   <% end %>
 </ul>

@@ -1,5 +1,6 @@
 <div class="box col3">
 	<%= work.title %>
+  | <%= link_to "edit", edit_collection_work_path(@collection, work) %>
   | <%= link_to "delete", work, method: :delete, data: { confirm: "You sure?" } %><br>
   <%= image_tag work.link %>
 </div>

@@ -20,9 +20,17 @@ class CollectionsController < ApplicationController
   end
 
   def edit
+    @collection = Collection.find(params[:id])
   end
 
   def update
+    @collection = Collection.find(params[:id])
+    if @collection.update_attributes(params[:collection])
+      flash[:success] = "#{@collection.title} successfully updated."
+      redirect_to collections_url
+    else
+      render :edit
+    end
   end
 
   def index
