@@ -14,8 +14,10 @@ class Work < ActiveRecord::Base
   attr_accessible :collection_id, :link, :title
   belongs_to :collection
 
+# validates_format_of :image, :with => %r{\.(png|jpg|jpeg)$}i, :message => "whatever"
+
   validates :collection_id, presence: true
-  VALID_LINK_REGEX = /.+[.]jpg\z/
+  VALID_LINK_REGEX = %r{\.(png|jpg|jpeg|gif)$}i
   validates :link, presence: false, format: { with: VALID_LINK_REGEX }
   validates :title, presence: true
 end
