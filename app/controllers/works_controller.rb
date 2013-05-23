@@ -24,18 +24,26 @@ class WorksController < ApplicationController
   end
 
   def edit
+    @collection = Collection.find(params[:collection_id])
     @work = Work.find(params[:id])
   end
 
   def update
+    @collection = Collection.find(params[:collection_id])
     @work = Work.find(params[:id])
-    if @work.update_attributes(params[:work])
+    if @work.update_attribute(:title, params[:title]) && @work.update_attribute(:link, params[:link]) 
       flash[:success] = "Work updated."
-      redirect_to @work.collection
+      redirect_to @collection
     else
       render :edit
     end
   end 
+
+  # @topic = Topic.find(params[:topic_id])
+  #   @post = @topic.posts.find(params[:id])
+  #   @post.update_attribute(:content, params[:content])
+  #   flash[:success] = "Post updated."
+  #   redirect_to edit_topic_post_url(@topic, @post)
 
   def destroy
     @work = Work.find(params[:id]) 

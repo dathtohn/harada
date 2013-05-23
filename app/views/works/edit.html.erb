@@ -1,7 +1,11 @@
 <% provide(:title, "Edit Work") %>
 <h1>Edit Work</h1>
 
-<%= form_tag(collection_work_path) do %>
+<% @work.errors.full_messages.each do |msg| %>
+  <li><%= msg %></li>
+<% end %>
+
+<%= form_tag(collection_work_path(@collection, @work), method: :put) do %>
   <%= label_tag :title %><br>
   <%= text_field_tag :title %><br>
 	
