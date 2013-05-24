@@ -7,10 +7,10 @@
 
 <%= form_tag(collection_work_path(@collection, @work), method: :put) do %>
   <%= label_tag :title %><br>
-  <%= text_field_tag :title %><br>
+  <%= text_field_tag :title, @work.title %><br>
 	
 	<%= label_tag :link %><br>
-  <%= text_field_tag :link %><br>
+  <%= text_field_tag :link, @work.link  %><br>
 
   <%= submit_tag "Edit work" %>
 <% end %>
