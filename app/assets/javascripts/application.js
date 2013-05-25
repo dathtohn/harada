@@ -11,6 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require bootstrap
 //= require masonry/jquery.masonry
 //= require masonry/modernizr-transitions
 //= require fancybox
