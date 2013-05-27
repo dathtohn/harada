@@ -1,6 +1,6 @@
 Harada::Application.routes.draw do
-  resources :sessions
-  
+  resources :sessions, only: [:create, :destroy]
+
   resources :collections do
     resources :works
   end
@@ -9,10 +9,11 @@ Harada::Application.routes.draw do
 
   root to: 'pages#home'
 
-  match '/admin',     to: 'sessions#new'
+  match '/admin',     to: 'sessions#create'
   match '/portfolio', to: 'collections#index'
   match '/about',     to: 'pages#about'
   match '/contact',   to: 'pages#contact'
+  match '/signout',   to: 'sessions#destroy', via: :delete
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
