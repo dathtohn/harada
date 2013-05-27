@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-	http_basic_authenticate_with name: "eric", password: "liue", except: :destroy
+	http_basic_authenticate_with name: "admin", password: "password", except: :destroy
 	# force_ssl except: :destroy
 
   def create
