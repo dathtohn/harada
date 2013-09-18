@@ -9,11 +9,11 @@ Harada::Application.routes.draw do
 
   root to: 'pages#home'
 
-  match '/admin',     to: 'sessions#create'
-  match '/portfolio', to: 'collections#index'
-  match '/about',     to: 'pages#about'
-  match '/contact',   to: 'pages#contact'
-  match '/signout',   to: 'sessions#destroy', via: :delete
+  get '/admin',     to: 'sessions#create'
+  get '/portfolio', to: 'collections#index'
+  get '/about',     to: 'pages#about'
+  get '/contact',   to: 'pages#contact'
+  get '/signout',   to: 'sessions#destroy', via: :delete
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
