@@ -3,9 +3,7 @@
 		.navbar-inner
 			.container
 				%ul.nav.pull-right
-					%li
-						= link_to 'Wigs', '#'
-					%li
-						= link_to 'Projects', '#'
-					
-	
+					%li= link_to 'Wigs', '#'
+					%li= link_to 'Projects', '#'
+					- if signed_in?
+						%li= link_to 'Sign out', signout_path, method: :delete

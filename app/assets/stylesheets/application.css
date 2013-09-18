@@ -16,6 +16,6 @@
  *= require 'masonry/infinitescroll'
  *= require 'masonry/right-to-left'
  *= require 'masonry/transitions'
- *= require fancybox
- *= require_tree .
+ *= require 'fancybox'
+ *= require 'app'
  */

@@ -1,20 +1,15 @@
 @import "bootstrap";
-@import "bootstrap-responsive";
+// @import "bootstrap-responsive";
+@import "mixins";
 
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
 
-@mixin box_sizing {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box;
-}
-
 /* universal */
 
 html {
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 body {
@@ -43,7 +38,7 @@ ul {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+  line-height: normal;
 }
 
 h1 {
@@ -70,6 +65,9 @@ p {
 
 /* header */
 
+nav.navbar .navbar-inner {
+  @include remove-gradient();
+}
 #logo {
   float: left;
   margin-right: 10px;
@@ -147,7 +145,7 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
-  @include box_sizing;
+  @include set-box-sizing();
 }
 
 #error_explanation {
@@ -174,6 +172,6 @@ input {
   float: left;
   width: 100%;
   margin-top: 45px;
-  @include box_sizing;
+  @include set-box-sizing();
 }
 
